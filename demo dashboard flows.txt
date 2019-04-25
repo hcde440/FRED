@@ -1,0 +1,815 @@
+[
+    {
+        "id": "5230c72.fadcf38",
+        "type": "tab",
+        "label": "Example Flows",
+        "disabled": false,
+        "info": "This is a sheet of several example flows demonstrating simple UI interactions on the dashboard and publishing to an MQTT server."
+    },
+    {
+        "id": "84499b6b.8ac208",
+        "type": "ui_tab",
+        "z": "5230c72.fadcf38",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "df8ab87.e4f1548",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "mediatedspaces.net",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "connected from Node Red",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "disconnected from Node Red",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "6d9c1936.8c75e8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Send to Mediatedspaces",
+        "tab": "84499b6b.8ac208",
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "757c8bb.e54fb74",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "325a3079.e08f9",
+        "type": "ui_group",
+        "z": "",
+        "name": "Some Buttons",
+        "tab": null,
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "4639186e.40f628",
+        "type": "ui_group",
+        "z": "",
+        "name": "Gauges Panel",
+        "tab": "84499b6b.8ac208",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "b50a1dca.54915",
+        "type": "websocket-listener",
+        "z": "",
+        "path": "/ws/thing",
+        "wholemsg": "false"
+    },
+    {
+        "id": "6f72f5a8.219c8c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Send to mediatedSpaces",
+        "tab": null,
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "79fa7a0a.6db694",
+        "type": "ui_link",
+        "z": "",
+        "name": "Go to Canvas",
+        "link": "https://canvas.uw.edu/courses/1273442",
+        "icon": "open_in_browser",
+        "target": "newtab",
+        "order": 3
+    },
+    {
+        "id": "65fd750f.f12e1c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Map Group 1",
+        "tab": null,
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "1c4a9bbc.fe7624",
+        "type": "ui_group",
+        "z": "5230c72.fadcf38",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "fe67dec6.eb706",
+        "type": "ui_group",
+        "z": "",
+        "name": "Data",
+        "tab": null,
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "bb3382a0.ca634",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "122c3b70.9daf85",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "696e0582.28c5dc",
+        "type": "ui_group",
+        "z": "",
+        "name": "Some Data",
+        "tab": "84499b6b.8ac208",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": true
+    },
+    {
+        "id": "64461732.531f38",
+        "type": "mqtt in",
+        "z": "5230c72.fadcf38",
+        "name": "JSON from mediatedspaces",
+        "topic": "theBrockulator/humidity",
+        "qos": "2",
+        "broker": "df8ab87.e4f1548",
+        "x": 240,
+        "y": 460,
+        "wires": [
+            [
+                "5af5bd36.32efc4"
+            ]
+        ]
+    },
+    {
+        "id": "ab6bacaa.df6f3",
+        "type": "debug",
+        "z": "5230c72.fadcf38",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 690,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "5af5bd36.32efc4",
+        "type": "json",
+        "z": "5230c72.fadcf38",
+        "name": "JSON parser",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "d59126b9.e74868",
+                "34afe1e1.5a009e",
+                "fa754eaf.3bf16"
+            ]
+        ]
+    },
+    {
+        "id": "d9eb04d8.131b28",
+        "type": "ui_gauge",
+        "z": "5230c72.fadcf38",
+        "name": "Temp Gauge",
+        "group": "4639186e.40f628",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°F",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 970,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "d59126b9.e74868",
+        "type": "function",
+        "z": "5230c72.fadcf38",
+        "name": "extract temp value",
+        "func": "var temp = {payload:msg.payload.temp};\nreturn temp;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 560,
+        "wires": [
+            [
+                "d9eb04d8.131b28"
+            ]
+        ]
+    },
+    {
+        "id": "7745d241.9d221c",
+        "type": "ui_gauge",
+        "z": "5230c72.fadcf38",
+        "name": "Humidity Gauge",
+        "group": "4639186e.40f628",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "gtype": "donut",
+        "title": "% RH",
+        "label": "millibars",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#6787b5",
+            "#d9e6db",
+            "#ca7114"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 980,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "34afe1e1.5a009e",
+        "type": "function",
+        "z": "5230c72.fadcf38",
+        "name": "extract humidity value",
+        "func": "var temp = {payload:msg.payload.humidity};\nreturn temp;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 740,
+        "y": 520,
+        "wires": [
+            [
+                "7745d241.9d221c"
+            ]
+        ]
+    },
+    {
+        "id": "a5f28686.ac6a78",
+        "type": "ui_switch",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "label": "A Switch",
+        "group": "6d9c1936.8c75e8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "theBrockulator/switch",
+        "style": "",
+        "onvalue": "{\"switchState\":\"1\"}",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"switchState\":\"0\"}",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "1a8e7669.f2ddea"
+            ]
+        ]
+    },
+    {
+        "id": "1a8e7669.f2ddea",
+        "type": "mqtt out",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "topic": "theBrockulator/FRED",
+        "qos": "",
+        "retain": "",
+        "broker": "df8ab87.e4f1548",
+        "x": 740,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1d53dea1.f54311",
+        "type": "inject",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "topic": "",
+        "payload": "this is just some text",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "6d5aa311.2bd6dc"
+            ]
+        ]
+    },
+    {
+        "id": "50fae5db.48b14c",
+        "type": "data-generator",
+        "z": "5230c72.fadcf38",
+        "name": "Data Generator",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "json",
+        "template": "{\n    \"name\": \"{{firstName}} {{lastName}}\",\n    \"work\": \"{{company}}\",\n    \"email\": \"{{email}}\",\n    \"address\": \"{{int 1 100}} {{street}}\",\n    \"country\": \"{{country}}\"\n}",
+        "x": 440,
+        "y": 980,
+        "wires": [
+            [
+                "ab6bacaa.df6f3",
+                "f688dce9.2021d"
+            ]
+        ]
+    },
+    {
+        "id": "b3defdb1.21dba",
+        "type": "inject",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 210,
+        "y": 980,
+        "wires": [
+            [
+                "50fae5db.48b14c"
+            ]
+        ]
+    },
+    {
+        "id": "f688dce9.2021d",
+        "type": "ui_text",
+        "z": "5230c72.fadcf38",
+        "group": "696e0582.28c5dc",
+        "order": 4,
+        "width": "12",
+        "height": "2",
+        "name": "Randomly Generated Data",
+        "label": "Some Randomly Generated Data",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 760,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "88f2c6ef.4a8098",
+        "type": "ui_button",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "group": "4639186e.40f628",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "The 25 Button",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "25",
+        "payloadType": "str",
+        "topic": "",
+        "x": 200,
+        "y": 840,
+        "wires": [
+            [
+                "d9eb04d8.131b28"
+            ]
+        ]
+    },
+    {
+        "id": "6d5aa311.2bd6dc",
+        "type": "debug",
+        "z": "5230c72.fadcf38",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 690,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "727c7cac.ff3eb4",
+        "type": "debug",
+        "z": "5230c72.fadcf38",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 690,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "66c38f63.5872b",
+        "type": "ui_button",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "group": "4639186e.40f628",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "The 75 Button",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "75",
+        "payloadType": "str",
+        "topic": "",
+        "x": 200,
+        "y": 880,
+        "wires": [
+            [
+                "d9eb04d8.131b28",
+                "727c7cac.ff3eb4",
+                "e691afb6.ad59b"
+            ]
+        ]
+    },
+    {
+        "id": "fa754eaf.3bf16",
+        "type": "debug",
+        "z": "5230c72.fadcf38",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 690,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "bb969505.6319c8",
+        "type": "comment",
+        "z": "5230c72.fadcf38",
+        "name": "Sending Data to debug",
+        "info": "Text descriptions",
+        "x": 220,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c530a940.25e168",
+        "type": "ui_button",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "group": "6d9c1936.8c75e8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Just a button",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"buttonState\":\"1\"}",
+        "payloadType": "str",
+        "topic": "theBrockulator/button",
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "1a8e7669.f2ddea"
+            ]
+        ]
+    },
+    {
+        "id": "603f74fe.24fd8c",
+        "type": "comment",
+        "z": "5230c72.fadcf38",
+        "name": "Sending Data to MQTT Broker",
+        "info": "",
+        "x": 240,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "448c6bc0.c30714",
+        "type": "comment",
+        "z": "5230c72.fadcf38",
+        "name": "Receiving Data from MQTT Broker",
+        "info": "",
+        "x": 260,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "4f60106a.fae3",
+        "type": "ui_button",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "group": "4639186e.40f628",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Wet Button",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "90",
+        "payloadType": "str",
+        "topic": "",
+        "x": 190,
+        "y": 800,
+        "wires": [
+            [
+                "7745d241.9d221c"
+            ]
+        ]
+    },
+    {
+        "id": "3d9c4902.9fd866",
+        "type": "comment",
+        "z": "5230c72.fadcf38",
+        "name": "Dashboard controls",
+        "info": "",
+        "x": 210,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "e0397fd2.e5a0a",
+        "type": "ui_button",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "group": "4639186e.40f628",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Dry Button",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "15",
+        "payloadType": "str",
+        "topic": "",
+        "x": 190,
+        "y": 760,
+        "wires": [
+            [
+                "7745d241.9d221c"
+            ]
+        ]
+    },
+    {
+        "id": "e691afb6.ad59b",
+        "type": "ui_audio",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "group": "4639186e.40f628",
+        "voice": "ru-RU",
+        "always": false,
+        "x": 700,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "52e1fabc.1ff244",
+        "type": "ui_slider",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "label": "Just a slider",
+        "group": "6d9c1936.8c75e8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "1a8e7669.f2ddea"
+            ]
+        ]
+    },
+    {
+        "id": "b2248b60.0a3a98",
+        "type": "ui_numeric",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "label": "Just a number",
+        "group": "6d9c1936.8c75e8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [
+                "1a8e7669.f2ddea",
+                "a4c4ba66.42f728"
+            ]
+        ]
+    },
+    {
+        "id": "a4c4ba66.42f728",
+        "type": "ui_text",
+        "z": "5230c72.fadcf38",
+        "group": "6d9c1936.8c75e8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Here's a Label for a number, like: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 700,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "936d83d3.33814",
+        "type": "slack",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "channelURL": "https://hooks.slack.com/services/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",
+        "username": "Brock",
+        "emojiIcon": "",
+        "channel": "",
+        "x": 690,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "8d6c02.d9d964",
+        "type": "inject",
+        "z": "5230c72.fadcf38",
+        "name": "",
+        "topic": "",
+        "payload": "this is nuts",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 200,
+        "y": 1100,
+        "wires": [
+            [
+                "936d83d3.33814"
+            ]
+        ]
+    }
+]
